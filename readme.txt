@@ -30,7 +30,7 @@ The commands to run the spinups are listed as follows:
 
 The initial, 1st-stage closed system spin-up (e.g. see Ridgwell and Hargreaves [2007]):
 
-./runmuffin.sh cgenie.eb_go_gs_ac_bg_sg_rg_gl.p0251b.BASESCH4_YC YC p0251b.PO4.DIC13CDoubleInversionCui.SPIN1 20000
+./runmuffin.sh cgenie.eb_go_gs_ac_bg.p0251b.BASESFe_YC YC p0251b.PO4.DIC13CDoubleInversionCui.SPIN1 20000
 
 (1b) Second Stage SPINUP
 
