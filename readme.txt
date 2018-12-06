@@ -4,32 +4,25 @@
 
 For:
 'Catastrophic volcanic carbon emission during the Permian-Triassic Super Greenhouse'
-Ying Cui, Andy Ridgwell, + others
+Ying Cui, Andy Ridgwell, Jiuyuan Wang, Feihong Ye, Feifei Zhang + others
 
 ################################################################
 2018/12/06 -- README.txt file creation (Y.C.)
 ################################################################
 
-Provided is the code used to create the model experiments presented in the paper.
-Also given are the configuration files necessary to run these experiments.
+Code used to run the model experiments is provided.
+User and base configuration files used to run these experiments are also provided.
 
-The intention is to provide an oppertunity to question the assumptions and
-interpretation through re-analysis and the creation of new and different experiments.
-(Plus, to provide a means to replicate results.)
+The intention is to replicate results. 
 
 ### code version ###############################################
 
-The specific svn version of the code that runs the experiments, is:
-
-r.9984
-
-(but the expectation is that the current (head) version will also always replicate the published results)
+The specific GitHub version is December 06, 2018
 
 ### model experiments -- spinups ################################
 
 All experiments are run from:
 $HOME/cgenie.muffin/genie-main
-(unless a different installation directory has been used)
 
 The commands to run the spinups are listed as follows:
 
@@ -37,7 +30,7 @@ The commands to run the spinups are listed as follows:
 
 The initial, 1st-stage closed system spin-up (e.g. see Ridgwell and Hargreaves [2007]):
 
-./runmuffin.sh cgenie.eb_go_gs_ac_bg_sg_rg.p0055c.BASES MS/gutjahretal.2017 SPIN1 20000
+./runmuffin.sh cgenie.eb_go_gs_ac_bg_sg_rg_gl.p0251b.BASESCH4_YC YC p0251b.PO4.DIC13CDoubleInversionCui.SPIN1 20000
 
 (1b) Second Stage SPINUP
 
