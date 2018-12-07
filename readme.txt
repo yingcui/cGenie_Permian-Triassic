@@ -32,6 +32,8 @@ The initial, 1st-stage closed system spin-up (e.g. see Ridgwell and Hargreaves [
 
 ./runmuffin.sh cgenie.eb_go_gs_ac_bg.p0251b.BASESFe_YC YC p0251b.PO4.DIC13CDoubleInversionCui.SPIN1 20000
 
+qsub -j y -o cgenie_log -V -S /bin/bash runmuffin.sh cgenie.eb_go_gs_ac_bg.p0251b.BASESFe_YC YC p0251b.PO4.DIC13CDoubleInversionCui.SPIN1 20000
+
 (1b) Second Stage SPINUP
 
 The follow-on, 2nd-stage open system and accelerated spin-up (e.g. see Ridgwell and Hargreaves [2007] and Lord et al. [2015]):
