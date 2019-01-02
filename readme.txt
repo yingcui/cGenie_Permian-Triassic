@@ -7,7 +7,7 @@ For:
 Ying Cui, Andy Ridgwell, Jiuyuan Wang, Feihong Ye, Feifei Zhang + others
 
 ################################################################
-2018/12/06 -- README.txt file creation (Y.C.)
+2018/12/06 -- readme.txt file creation (Y.C.)
 ################################################################
 
 Code used to run the model experiments is provided.
@@ -28,15 +28,20 @@ The commands to run the spinups are listed as follows:
 
 (1a) INITIAL SPINUP
 
-The initial, 1st-stage closed system spin-up (e.g. see Ridgwell and Hargreaves [2007]):
-./runmuffin.sh cgenie.eb_go_gs_ac_bg_sg_rg_gl.p0251b.BASESCH4_YC YC p0251b.PO4.DIC13CDoubleInversionCui.SPIN1 20
+The initial, 1st-stage closed system spin-up (see Cui et al. [2013]):
+./runmuffin.sh cgenie.eb_go_gs_ac_bg_sg_rg_gl.p0251b.BASESCH4_YC YC p0251b.PO4.DIC13CDoubleInversionCui.SPIN1 20 (fatal error, cannot stat "fort.2": No such file or directory
+./runmuffin.sh cgenie.eb_go_gs_ac_bg_sg_rg_gl.p0251b.BASESCH4 YC p0251b.PO4.DIC13CDoubleInversionCui.SPIN1 20 (fatal error, foram_p_13C is not defined)
+./runmuffin.sh cgenie.eb_go_gs_ac_bg.p0251b.BASESFe YC p0251b.PO4.DIC13CDoubleInversionCui.SPIN1 20 (successfully tried on 01-02-2019)
+./runmuffin.sh cgenie.eb_go_gs_ac_bg.p0251b.BASESFeTDTL / EXAMPLE.p0251b.PO4Fe.SPIN 20 (fatal error on 01-02-2019: Fe scheme does not match userconfig)
+./runmuffin.sh cgenie.eb_go_gs_ac_bg_sg_rg_gl.p0251b.BASESCH4_YC / EXAMPLE.p0251b.PO4CH4.SPIN0 20 ()
 
-qsub -j y -o cgenie_log -V -S /bin/bash runmuffin.sh cgenie.eb_go_gs_ac_bg_sg_rg_gl.p0251b.BASESCH4_YC YC p0251b.PO4.DIC13CDoubleInversionCui.SPIN1 20
+
+qsub -j y -o cgenie_log -V -S /bin/bash runmuffin.sh cgenie.eb_go_gs_ac_bg_sg_rg_gl.p0251b.BASESCH4 YC p0251b.PO4.DIC13CDoubleInversionCui.SPIN1 20
 
 
 (1b) Second Stage SPINUP
 
-The follow-on, 2nd-stage open system and accelerated spin-up (e.g. see Ridgwell and Hargreaves [2007] and Lord et al. [2015]):
+The follow-on, 2nd-stage open system and accelerated spin-up (e.g. see Lord et al. [2015]):
 
 ./runmuffin.sh cgenie.eb_go_gs_ac_bg_sg_rg_gl.p0055c.BASES MS/gutjahretal.2017 SPIN2gl 200000 SPIN1
 
