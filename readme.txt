@@ -29,14 +29,18 @@ The commands to run the spinups are listed as follows:
 (1a) INITIAL SPINUP
 
 The initial, 1st-stage closed system spin-up (see Cui et al. [2013]):
-./runmuffin.sh cgenie.eb_go_gs_ac_bg_sg_rg_gl.p0251b.BASESCH4_YC YC p0251b.PO4.DIC13CDoubleInversionCui.SPIN1 20 (fatal error, cannot stat "fort.2": No such file or directory
+./runmuffin.sh cgenie.eb_go_gs_ac_bg_sg_rg_gl.p0251b.BASESCH4_YC YC p0251b.PO4.DIC13CDoubleInversionCui.SPIN1 20 (fatal error, cannot stat "fort.2": No such file or directory;) (Now on Jan-02-2019, this model starts to work after changing the forcing file to "pyyyyz.RpCO2_Rp13CO2_FRALK_FDIC_F13DIC_FCa")
 ./runmuffin.sh cgenie.eb_go_gs_ac_bg_sg_rg_gl.p0251b.BASESCH4 YC p0251b.PO4.DIC13CDoubleInversionCui.SPIN1 20 (fatal error, foram_p_13C is not defined)
 ./runmuffin.sh cgenie.eb_go_gs_ac_bg.p0251b.BASESFe YC p0251b.PO4.DIC13CDoubleInversionCui.SPIN1 20 (successfully tried on 01-02-2019)
 ./runmuffin.sh cgenie.eb_go_gs_ac_bg.p0251b.BASESFeTDTL / EXAMPLE.p0251b.PO4Fe.SPIN 20 (fatal error on 01-02-2019: Fe scheme does not match userconfig)
-./runmuffin.sh cgenie.eb_go_gs_ac_bg_sg_rg_gl.p0251b.BASESCH4_YC / EXAMPLE.p0251b.PO4CH4.SPIN0 20 ()
+./runmuffin.sh cgenie.eb_go_gs_ac_bg_sg_rg_gl.p0251b.BASESCH4 / EXAMPLE.p0251b.PO4CH4.SPIN0 20 (changed the forcing file name to "pyyyyz.RpCO2_Rp13CO2_FRALK_FDIC_F13DIC_FCa"; fatal error occurred - "cp: cannot stat `fort.2': No such file or directory")
+./runmuffin.sh cgenie.eb_go_gs_ac_bg_sg_rg_gl.p0251b.BASESCH4_YC / EXAMPLE.p0251b.PO4CH4.SPIN0 20 (changed GOLDSTEINNTRACSOPTS='$(DEFINE)GOLDSTENNTRACS=18, including the defaulted temperature and salinity)
 
 
 qsub -j y -o cgenie_log -V -S /bin/bash runmuffin.sh cgenie.eb_go_gs_ac_bg_sg_rg_gl.p0251b.BASESCH4 YC p0251b.PO4.DIC13CDoubleInversionCui.SPIN1 20
+-------Currently running-------------------------------------------------(Jan-02-2019)------------------
+qsub -j y -o cgenie_log -V -S /bin/bash runmuffin.sh cgenie.eb_go_gs_ac_bg_sg_rg_gl.p0251b.BASESCH4_YC / EXAMPLE.p0251b.PO4CH4.SPIN0 20000
+Job #21238
 
 
 (1b) Second Stage SPINUP
