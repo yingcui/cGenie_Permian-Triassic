@@ -38,9 +38,9 @@ The initial, 1st-stage closed system spin-up (see Cui et al. [2013]):
 
 
 qsub -j y -o cgenie_log -V -S /bin/bash runmuffin.sh cgenie.eb_go_gs_ac_bg_sg_rg_gl.p0251b.BASESCH4 YC p0251b.PO4.DIC13CDoubleInversionCui.SPIN1 20
--------Currently running-------------------------------------------------(Jan-02-2019)------------------
+-------Currently running (added more ocean and sedimentary tracers)--------------------------------(Jan-03-2019)------------------
 qsub -j y -o cgenie_log -V -S /bin/bash runmuffin.sh cgenie.eb_go_gs_ac_bg_sg_rg_gl.p0251b.BASESCH4_YC / EXAMPLE.p0251b.PO4CH4.SPIN0 20000
-Job #21238
+Job #21256
 
 
 (1b) Second Stage SPINUP
