@@ -35,13 +35,15 @@ The initial, 1st-stage closed system spin-up (see Cui et al. [2013]):
 ./runmuffin.sh cgenie.eb_go_gs_ac_bg.p0251b.BASESFeTDTL / EXAMPLE.p0251b.PO4Fe.SPIN 20 (fatal error on 01-02-2019: Fe scheme does not match userconfig)
 ./runmuffin.sh cgenie.eb_go_gs_ac_bg_sg_rg_gl.p0251b.BASESCH4 / EXAMPLE.p0251b.PO4CH4.SPIN0 20 (changed the forcing file name to "pyyyyz.RpCO2_Rp13CO2_FRALK_FDIC_F13DIC_FCa"; fatal error occurred - "cp: cannot stat `fort.2': No such file or directory")
 ./runmuffin.sh cgenie.eb_go_gs_ac_bg_sg_rg_gl.p0251b.BASESCH4_YC / EXAMPLE.p0251b.PO4CH4.SPIN0 20 (changed GOLDSTEINNTRACSOPTS='$(DEFINE)GOLDSTENNTRACS=18, including the defaulted temperature and salinity)
+./runmuffin.sh cgenie.eb_go_gs_ac_bg_sg_rg_gl.p0251b.BASESCH4_YC YC EXP.p0251b.PO4CH4.13C.44Ca.7Li.87Sr.34S.SPIN0 20 (changed GOLDSTEINNTRACSOPTS='$(DEFINE)GOLDSTENNTRACS=18, including the defaulted temperature and salinity)
 
 
 qsub -j y -o cgenie_log -V -S /bin/bash runmuffin.sh cgenie.eb_go_gs_ac_bg_sg_rg_gl.p0251b.BASESCH4 YC p0251b.PO4.DIC13CDoubleInversionCui.SPIN1 20
 -------Currently running (added more ocean and sedimentary tracers)--------------------------------(Jan-03-2019)------------------
 qsub -j y -o cgenie_log -V -S /bin/bash runmuffin.sh cgenie.eb_go_gs_ac_bg_sg_rg_gl.p0251b.BASESCH4_YC / EXAMPLE.p0251b.PO4CH4.SPIN0 20000
 Job #21257
-
+-------Currently running (added initial values of Li isotopes=23)--------------------------------(Jan-04-2019)------------------
+qsub -j y -o cgenie_log -V -S /bin/bash runmuffin.sh cgenie.eb_go_gs_ac_bg_sg_rg_gl.p0251b.BASESCH4_YC YC EXP.p0251b.PO4CH4.13C.44Ca.7Li.87Sr.34S.SPIN0 20000
 
 (1b) Second Stage SPINUP
 
